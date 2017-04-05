@@ -17,9 +17,10 @@ class RecipeEditor extends PureComponent {
   constructor(props) {
     super()
 
-    const { title, summary, vegan, vegetarian, pescatarian, photo } = props
+    const { _id, title, summary, vegan, vegetarian, pescatarian, photo } = props
 
     this.state = {
+      _id,
       title,
       summary,
       vegan,
@@ -45,6 +46,15 @@ class RecipeEditor extends PureComponent {
     })
   }
 
+
+  updateId(event) {
+    this.setState({
+      id: this.refs._id.value
+    })
+  }
+
+
+
   updateIntro(text, medium) {
     this.setState({
       summary: text
@@ -62,6 +72,7 @@ class RecipeEditor extends PureComponent {
 
   saveRecipe() {
     const {
+      _id,
       title,
       summary,
       vegetarian,
@@ -71,6 +82,7 @@ class RecipeEditor extends PureComponent {
     } = this.state
 
     const recipe = {
+      _id,
       title,
       summary: toMarkdown(summary),
       vegetarian,
@@ -96,6 +108,15 @@ class RecipeEditor extends PureComponent {
           defaultValue={this.state.title}
           onChange={this.updateTitle.bind(this)}
           onKeyDown={this.updateTitle.bind(this)} />
+
+          <input
+            type="text"
+            ref="_id"
+            className="id"
+            placeholder="ID"
+            defaultValue={this.state._id}
+            onChange={this.updateId.bind(this)}
+            onKeyDown={this.updateId.bind(this)} />
 
         <Editor
           ref="summary"
