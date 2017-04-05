@@ -46,13 +46,11 @@ class RecipeEditor extends PureComponent {
     })
   }
 
-
   updateId(event) {
     this.setState({
-      id: this.refs._id.value
+      _id: this.refs._id.value
     })
   }
-
 
 
   updateIntro(text, medium) {
