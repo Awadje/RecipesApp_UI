@@ -7,6 +7,8 @@ export default (state = [], { type, payload } = {}) => {
   switch(type) {
     case SEED_RECIPES :
       return [].concat(payload)
+    case CREATE_RECIPE :
+      return [Object.assign({}, payload)].concat(state)
 
   case TOGGLE_LIKE :
     return state.map((recipe) => {
@@ -14,12 +16,7 @@ export default (state = [], { type, payload } = {}) => {
         return { ...recipe, liked: !recipe.liked }
       }
       return recipe
-    })
-
-  export default (state = initialState, { type, payload } = {}) => {
-    switch(type) {
-      case CREATE_RECIPE :
-        return [Object.assign({}, payload)].concat(state)
+    })    
 
     default :
       return state

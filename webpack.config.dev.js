@@ -50,7 +50,7 @@ module.exports = {
       { test: /\.eot$/,         loader: "file-loader" },
       { test: /\.svg$/,         loader: "file-loader" },
       { test: /\.(png|gif)$/,   loader: "file-loader" },
-      { test: /\.(sass|scss)$/, loader: 'style!css!sass'},
+      { test: /\.(css|sass|scss)$/, loader: 'style!css!sass'},
       { test: /\.json$/,        loader: "json-loader"}
     ]
   }
