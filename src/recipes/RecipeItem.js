@@ -3,6 +3,8 @@ import Vegan from '../images/vegan.svg'
 import Vegetarian from '../images/vegetarian.svg'
 import Pescatarian from '../images/pescatarian.svg'
 import LikeButton from '../components/LikeButton'
+import { connect } from 'react-redux'
+import { Link } from 'react-router'
 
 class RecipeItem extends PureComponent {
   static propTypes = {
@@ -14,15 +16,18 @@ class RecipeItem extends PureComponent {
   }
 
   render() {
-    const { _id, title, summary, vegan, vegetarian, pescatarian, liked } = this.props
+    const { _id, title, summary, vegan, vegetarian, pescatarian, photo, liked } = this.props
+
 
     const style = {
       height: '1em'
     }
 
     return (
-      <article className="recipe">
-        <h1>{ title }</h1>
+         <article className="recipe">
+        <h1>
+          <Link to={`/recipes/${_id}`}>{ title }</Link>
+        </h1>
         <div>
           <p>{ summary }</p>
           <ul>
