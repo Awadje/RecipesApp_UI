@@ -1,4 +1,4 @@
-# RecipesApp
+# RecipesApp_UI
 Stack: React, Redux, Expect Testing
 
 A recipes app UI were you are able to post recipes, and give likes to other recipes. It's connected to a FeathersJS API using a mongoDB database.<br>
