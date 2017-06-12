@@ -1,15 +1,13 @@
-# React Starter
+# RecipesApp
+Stack: React, Redux, Expect Testing
 
-## Installation
+A recipes app UI were you are able to post recipes, and give likes to other recipes. It's connected to a FeathersJS API using a mongoDB database.
 
-```bash
-npm install
-npm start
-open http://localhost:3000
-```
+To Do:
+[ ] Add login
+[ ] Connect likes to users
+[ ] Styling
 
+![Screenshot:](https://res.cloudinary.com/dnbyfobad/image/upload/v1497255431/Screen_Shot_2017-06-12_at_10.16.19_cfohoo.png)
 
-------------------
-
-Simplified version of [react-transform-boilerplate](https://github.com/gaearon/react-transform-boilerplate) for the
-traineeship program.
+![Screenshot:](https://res.cloudinary.com/dnbyfobad/image/upload/v1497255431/Screen_Shot_2017-06-12_at_10.16.39_eqgzey.png)
